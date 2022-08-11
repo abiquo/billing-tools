@@ -1,0 +1,6 @@
+billing_database:
+   host:
+   user:
+   password:
+   port:
+   database: BILLING_BACKUP_RESULTS
