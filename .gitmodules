@@ -1,0 +1,3 @@
+[submodule "billing-tools"]
+	path = billing-tools
+	url = https://github.com/abiquo/billing-tools
