@@ -62,7 +62,7 @@ public class BillingBackupResultsDatabase
 
     public static void copyBackupResults(final Integer date) throws SQLException
     {
-        String kintonUrl = "jdbc:mysql://" + databaseHost + ":" + databasePort
+        String kintonUrl = "jdbc:mariadb://" + databaseHost + ":" + databasePort
             + "/kinton?serverTimezone=" + SYSTEM_ZONE_ID;
         String query =
             "SELECT b.id, b.provider_id, b.name, b.size, b.creation_date, b.expiration_date, b.status, b.type, b.virtual_machine_id, b.storage, b.replica, v.idEnterprise FROM backup_result b LEFT JOIN virtualmachine v ON b.virtual_machine_id = v.idVM";
@@ -170,7 +170,7 @@ public class BillingBackupResultsDatabase
             databasePassword = creds.get("password");
             databasePort = String.valueOf(creds.get("port"));
             database = creds.get("database");
-            databaseUrl = "jdbc:mysql://" + databaseHost + ":" + databasePort + "/";
+            databaseUrl = "jdbc:mariadb://" + databaseHost + ":" + databasePort + "/";
             tableUrl = databaseUrl + database + "?serverTimezone=" + SYSTEM_ZONE_ID;
         }
     }
