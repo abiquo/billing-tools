@@ -89,7 +89,9 @@
                         <phase>package</phase>
                         <configuration>
                             <finalName>billing-backup-results</finalName>
-                            <descriptor>assembly.xml</descriptor>
+                            <descriptors>
+                                <descriptor>assembly.xml</descriptor>
+                            </descriptors>
                             <appendAssemblyId>false</appendAssemblyId>
                         </configuration>
                     </execution>
